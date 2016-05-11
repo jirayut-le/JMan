@@ -48,16 +48,16 @@ public class JMan extends Piece {
         0 = up, 1 = down, 2 = left, 3 = right. */
 	public void step(int i){
 		setActed(true);
-		if ( i == 0 && (getMap().isEmpty(getX(), getY()-1) || canEat(getMap().pieceAt(getX(), getY()-1))) && this.getMap().isInGrid(this.getX(), this.getY() - 1) ){
+		if ( i == 0 && (getMap().isEmpty(getX(), getY()-1) || canEat(getMap().pieceAt(getX(), getY()-1))) ){
 			this.getMap().move(this.getX(), this.getY(), this.getX(), this.getY() - 1);
 
-		} else if ( i == 1 && (getMap().isEmpty(getX(), getY()+1) || canEat(getMap().pieceAt(getX(), getY()+1))) && this.getMap().isInGrid(this.getX(), this.getY() + 1) ){
+		} else if ( i == 1 && (getMap().isEmpty(getX(), getY()+1) || canEat(getMap().pieceAt(getX(), getY()+1))) ){
 			this.getMap().move(this.getX(), this.getY(), this.getX(), this.getY() + 1);
 
-		} else if ( i == 2 && (getMap().isEmpty(getX()-1, getY()) || canEat(getMap().pieceAt(getX()-1, getY()))) && this.getMap().isInGrid(this.getX() -1, this.getY()) ){
+		} else if ( i == 2 && (getMap().isEmpty(getX()-1, getY()) || canEat(getMap().pieceAt(getX()-1, getY()))) ){
 			this.getMap().move(this.getX(), this.getY(), this.getX() -1, this.getY());
 
-		} else if ( i == 3 && (getMap().isEmpty(getX()+1, getY()) || canEat(getMap().pieceAt(getX()+1, getY()))) && this.getMap().isInGrid(this.getX() +1, this.getY()) ){
+		} else if ( i == 3 && (getMap().isEmpty(getX()+1, getY()) || canEat(getMap().pieceAt(getX()+1, getY()))) ){
 			this.getMap().move(this.getX(), this.getY(), this.getX() +1, this.getY());
 
 		}

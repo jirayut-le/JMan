@@ -44,13 +44,13 @@ public class Walker extends Piece{
 	public void act() {	
 		if ( Piece.rand(0, 2) == 0){
 			int random = Piece.rand(0, 2);
-			if ( random == 0 && getMap().isEmpty(getX(), getY()-1) && getMap().isInGrid(getX(), getY()-1)){
+			if ( random == 0 && getMap().isEmpty(getX(), getY()-1)){
 				getMap().move(getX(), getY(), getX(), getY() -1);
-			} else if ( random == 1 && getMap().isEmpty(getX(), getY()+1) && getMap().isInGrid(getX(), getY()+1)){
+			} else if ( random == 1 && getMap().isEmpty(getX(), getY()+1)){
 				getMap().move(getX(), getY(), getX(), getY() +1);
-			} else if ( random == 2 && getMap().isEmpty(getX()-1, getY()) && getMap().isInGrid(getX() -1, getY())){
+			} else if ( random == 2 && getMap().isEmpty(getX()-1, getY())){
 				getMap().move(getX(), getY(), getX() -1, getY());
-			} else if ( random == 3 && getMap().isEmpty(getX()+1, getY()) && getMap().isInGrid(getX() +1, getY())){
+			} else if ( random == 3 && getMap().isEmpty(getX()+1, getY())){
 				getMap().move(getX(), getY(), getX()+1, getY());
 			}
 		}
