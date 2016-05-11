@@ -1,6 +1,6 @@
 import java.awt.Color;
 /**
- * 
+ * An instance of this class is a Block.
  * @author Jirayut Leeupathumvong 5810546617
  *
  */
@@ -18,6 +18,9 @@ public class Block extends Piece{
 		super.setColor(Color.WHITE);
 	}
 
+	/**
+	 * nothing change of block.
+	 */
 	@Override
 	public void act() {}
 	

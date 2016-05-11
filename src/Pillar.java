@@ -1,6 +1,6 @@
 import java.awt.Color;
 /**
- * 
+ * An instance of this class is a Pillar.
  * @author Jirayut Leeupathumvong 5810546617
  *
  */
@@ -37,6 +37,9 @@ public class Pillar extends Piece{
 			super.setColor(c);
 	}
 
+	/**
+	 * random change the color the Pillar.
+	 */
 	@Override
 	public void act() {
 		this.setActed(true);

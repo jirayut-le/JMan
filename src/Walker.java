@@ -1,6 +1,6 @@
 import java.awt.Color;
 /**
- * 
+ * An instance of this class is a Walker.
  * @author Jirayut Leeupathumvong 5810546617
  *
  */
@@ -37,6 +37,9 @@ public class Walker extends Piece{
 			super.setColor(c);
 	}
 
+	/**
+	 * Action to random next position the walker to move.
+	 */
 	@Override
 	public void act() {	
 		if ( Piece.rand(0, 2) == 0){
